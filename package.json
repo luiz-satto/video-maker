@@ -4,7 +4,8 @@
   "description": "Project to create videos automatically",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "npm run typings",
+    "typings": "typings install"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/luiz-satto/video-maker/issues"
   },
-  "homepage": "https://github.com/luiz-satto/video-maker#readme"
+  "homepage": "https://github.com/luiz-satto/video-maker#readme",
+  "dependencies": {
+    "@types/node": "^14.14.20",
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "@types/readline-sync": "^1.4.3"
+  }
 }

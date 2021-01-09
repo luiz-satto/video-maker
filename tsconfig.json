@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "declaration": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "sourceMap": true,
+        "mapRoot": "./",
+        "outDir": "../dist/out-tsc",
+        "typeRoots": [
+            "../node_modules/@types"
+        ],
+        "baseUrl": "."
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
