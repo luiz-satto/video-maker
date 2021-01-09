@@ -1,7 +1,8 @@
 import readline = require('readline-sync');
 
 import { IOrchestrator } from './interfaces/IOrchestrator';
-import { ContentDto } from '../dtos/ContentDto';
+import { ContentDto } from './dtos/ContentDto';
+import { SentenceDto } from './dtos/SentenceDto';
 
 export class Orchestrator implements IOrchestrator {
     private static instance: Orchestrator;
@@ -30,6 +31,13 @@ export class Orchestrator implements IOrchestrator {
         let content = new ContentDto();
         content.searchTerm = askAndReturnSearchTerm();
         content.prefix = askAndReturnPrefix();
+        content.sourceContentOriginal = 'Source Content Original';
+        content.sourceContentSanitized = 'Source Content Sanitized';
+        content.sentences = [
+            new SentenceDto('Sentence 1', ['keyword 1', 'keyword 2'], ['img 1', 'img 2']),
+            new SentenceDto('Sentence 2', ['key 1', 'key 2'], ['imgage 1', 'imgage 2'])
+        ];
+
         return content;
 
         function askAndReturnSearchTerm() {

@@ -1,4 +1,4 @@
-import { ContentDto } from "dtos/ContentDto";
+import { ContentDto } from "orchestrator/dtos/ContentDto";
 
 export interface IOrchestrator {
     getContent(): ContentDto;
