@@ -1,14 +1,19 @@
+import { Robots } from "./robots/robots";
 import { Orchestrator } from "./orchestrator/orchestrator";
 
 class App {
     orchestrator: Orchestrator;
+    robots: Robots;
+
     constructor() {
         this.orchestrator = Orchestrator.getInstance();
+        this.robots = Robots.getInstance();
     }
 
-    init() {
+    async init() {
         let content = this.orchestrator.getContent();
-        console.log(content);
+        let robots = await this.robots.getRobots(content);
+        // console.log(robots);
     }
 }
 
